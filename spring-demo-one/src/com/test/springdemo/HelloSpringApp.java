@@ -11,8 +11,9 @@ ClassPathXmlApplicationContext context= new ClassPathXmlApplicationContext("appl
 Coach theCoach= context.getBean("myCoach",Coach.class);
 
 System.out.println(theCoach.getDailyWorkout());
+System.out.println(theCoach.getDailyPerformance());
 
-//456
+//
 context.close();
 
 	}

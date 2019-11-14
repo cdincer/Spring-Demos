@@ -11,9 +11,12 @@ http://www.springframework.org/schema/context/spring-context.xsd"
  xmlns="http://www.springframework.org/schema/beans">
 
 
+<bean id="myPerformance" class="com.test.springdemo.DailyPerService"> </bean>
 
-
-<bean id="myCoach" class="com.test.springdemo.BasketballCoach" >	</bean>
+<bean id="myCoach" class="com.test.springdemo.BaseballCoach" >
+	
+ 		<constructor-arg ref="myPerformance" />
+</bean>
 
 
 

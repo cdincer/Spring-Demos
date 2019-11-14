@@ -9,4 +9,10 @@ public class BasketballCoach implements Coach
 		return "Spend 10 minutes doing suicide drills";
 	}
 
+	@Override
+	public String getDailyPerformance() {
+		// TODO Auto-generated method stub
+		return "BasketBall Player performance was adequate today";
+	}
+
 }

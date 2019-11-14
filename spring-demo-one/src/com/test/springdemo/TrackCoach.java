@@ -8,4 +8,10 @@ public class TrackCoach implements Coach {
 		return "Daily run 30 minutes,Track Coach task";
 	}
 
+	@Override
+	public String getDailyPerformance() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
