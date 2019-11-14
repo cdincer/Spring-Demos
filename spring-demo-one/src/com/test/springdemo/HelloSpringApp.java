@@ -12,7 +12,7 @@ Coach theCoach= context.getBean("myCoach",Coach.class);
 
 System.out.println(theCoach.getDailyWorkout());
 
-
+//456
 context.close();
 
 	}
