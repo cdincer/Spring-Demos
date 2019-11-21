@@ -13,7 +13,7 @@ http://www.springframework.org/schema/context/spring-context.xsd"
 
 <bean id="myPerformance" class="com.test.springdemo.DailyPerService"> </bean>
 
-<bean id="myCoach" class="com.test.springdemo.TrackCoach" >
+<bean id="myCoach" class="com.test.springdemo.CricketCoach" >
 	
  		<constructor-arg ref="myPerformance" />
 </bean>
@@ -22,6 +22,8 @@ http://www.springframework.org/schema/context/spring-context.xsd"
 
 <!-- set up setter injection-->
 
-<property name="performanceService" ref="myPerformance" />
+<property name="PerAss" ref="myPerformance" />
+
 </bean>
+
 </beans>

@@ -11,10 +11,16 @@ public class CricketCoach implements Coach {
 		System.out.println("No argument CricketCoach argument triggered");
 	}
 	
+	public CricketCoach(PerformanceAssessment performanceReport) {
+		super();
+		PerAss = performanceReport;
+	}
+	
+	
 	//Setter method for CricketCoach
 	public void setPerAss(PerformanceAssessment perAss) {
 		System.out.println("setPerAss reached");
-		PerAss = perAss;
+		this.PerAss = perAss;
 	}
 
 
