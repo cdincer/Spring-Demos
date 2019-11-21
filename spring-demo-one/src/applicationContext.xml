@@ -15,14 +15,15 @@ http://www.springframework.org/schema/context/spring-context.xsd"
 
 <bean id="myCoach" class="com.test.springdemo.CricketCoach" >
 	
- 		<constructor-arg ref="myPerformance" />
+<constructor-arg ref="myPerformance" />
 </bean>
+
 
 <bean id="myCricketCoach" class="com.test.springdemo.CricketCoach">
 
-<!-- set up setter injection-->
-
 <property name="PerAss" ref="myPerformance" />
+<property name="emailAddress" value="cricketcoach@email.com"/>
+<property name="team" value="Cricket Players"/>
 
 </bean>
 
