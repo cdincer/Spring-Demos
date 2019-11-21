@@ -18,6 +18,10 @@ http://www.springframework.org/schema/context/spring-context.xsd"
  		<constructor-arg ref="myPerformance" />
 </bean>
 
+<bean id="myCricketCoach" class="com.test.springdemo.CricketCoach">
 
+<!-- set up setter injection-->
 
+<property name="performanceService" ref="myPerformance" />
+</bean>
 </beans>
