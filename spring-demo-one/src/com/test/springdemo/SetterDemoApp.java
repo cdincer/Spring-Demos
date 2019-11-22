@@ -17,6 +17,8 @@ public class SetterDemoApp {
 		
 		System.out.println(theCoach.getDailyPerformance());
 		
+		System.out.println(theCoach.getRandomAttributeReport());
+		
 		System.out.println("====CricketCoachGetValues====Begin");
 		System.out.println(theCoach.getTeam());
 		System.out.println(theCoach.getEmailAddress());

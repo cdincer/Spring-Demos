@@ -20,7 +20,7 @@ public class CricketCoach implements Coach {
 	}
 
 	public void setEmailAddress(String emailAddress) {
-		System.out.println("CricketCoach email assigned :"+ emailAddress);
+//		System.out.println("CricketCoach email assigned :"+ emailAddress);
 		this.emailAddress = emailAddress;
 	}
 
@@ -29,7 +29,7 @@ public class CricketCoach implements Coach {
 	}
 
 	public void setTeam(String team) {
-		System.out.println("CricketCoaches team name assigned :"+team);
+	//	System.out.println("CricketCoaches team name assigned :"+team);
 		this.team = team;
 	}
 	//Email and Team getter setter block end
@@ -37,12 +37,13 @@ public class CricketCoach implements Coach {
 	public CricketCoach(PerformanceAssessment performanceReport) {
 		super();
 		PerAss = performanceReport;
+		
 	}
 	
 	
 	//Setter method for CricketCoach
 	public void setPerAss(PerformanceAssessment perAss) {
-		System.out.println("setPerAss reached");
+	//	System.out.println("setPerAss reached");
 		this.PerAss = perAss;
 	}
 
@@ -55,6 +56,12 @@ public class CricketCoach implements Coach {
 	@Override
 	public String getDailyPerformance() {
 		return PerAss.getPerformance();
+	}
+
+	@Override
+	public String getRandomAttributeReport() {
+		// TODO Auto-generated method stub
+		return PerAss.RandomDailyAttributeReport();
 	}
 
 }

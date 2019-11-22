@@ -21,4 +21,10 @@ public class TrackCoach implements Coach {
 		return "Just Do It "+PerformanceReport.getPerformance();
 	}
 
+	@Override
+	public String getRandomAttributeReport() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

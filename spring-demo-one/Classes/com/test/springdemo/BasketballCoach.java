@@ -15,4 +15,13 @@ public class BasketballCoach implements Coach
 		return "BasketBall Player performance was adequate today";
 	}
 
+	@Override
+	public String getRandomAttributeReport() {
+		// TODO Auto-generated method stub
+		return " ";
+	}
+
+
+	
+	
 }

@@ -22,4 +22,11 @@ public class BaseballCoach implements Coach{
 		return PerformanceReport.getPerformance();
 	}
 
+	@Override
+	public String getRandomAttributeReport() {
+		// TODO Auto-generated method stub
+				return PerformanceReport.RandomDailyAttributeReport();
+
+	}
+
 }

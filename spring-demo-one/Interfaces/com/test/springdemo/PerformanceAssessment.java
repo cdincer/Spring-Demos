@@ -5,4 +5,6 @@ public interface PerformanceAssessment {
 	
 	public String getPerformance();
 
+	public String RandomDailyAttributeReport();
+	
 }
