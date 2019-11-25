@@ -9,11 +9,28 @@ public class BasketballCoach implements Coach
 	
 	private PerEval PerformanceEvaluation;
 	
-	@Autowired
+	public BasketballCoach()
+	{
+		System.out.println("<<No Arg Default Constructor");
+	}
+	
+	/*
 	public BasketballCoach(PerEval EvaluationType)
 	{
 		PerformanceEvaluation = EvaluationType;
 	}
+	*/
+	
+	
+	//Setter method
+	
+	@Autowired
+	public void setEvalType(PerEval EvaluationType)
+	{
+		PerformanceEvaluation = EvaluationType;
+		System.out.println("<<Auto Wired SetEvalType");
+	}
+	
 	
 	
 	

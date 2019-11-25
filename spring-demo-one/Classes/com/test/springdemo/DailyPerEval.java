@@ -18,7 +18,7 @@ public class DailyPerEval implements PerEval {
 		String Stat="";
 		String[] Stats= {"D--Strength","D--Perception","D--Endurance","D--Coolness","D--Intelligence","D--Agility"};
 		
-		Stat= Stats[Rand.nextInt(7)];
+		Stat= Stats[Rand.nextInt(6)];
 		return "Athletes "+Stat+" was great";
 	}
 
