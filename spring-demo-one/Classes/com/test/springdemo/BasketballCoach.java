@@ -2,10 +2,9 @@ package com.test.springdemo;
 
 import org.springframework.stereotype.Component;
 
-@Component("SpringCompBasketballCoach1")
+@Component
 public class BasketballCoach implements Coach
 {
-
 	@Override
 	public String getDailyWorkout() {
 		return "Spend 10 minutes doing suicide drills";
@@ -18,10 +17,8 @@ public class BasketballCoach implements Coach
 
 	@Override
 	public String getRandomAttributeReport() {
-		return "Great Passing Performance";
+		return "Added For Testing New Annotations";
 	}
 
 
-	
-	
 }
