@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class BasketballCoach implements Coach
 {
-	
+	@Autowired
 	private PerEval PerformanceEvaluation;
 	
 	public BasketballCoach()
@@ -23,14 +23,14 @@ public class BasketballCoach implements Coach
 	
 	
 	//Setter method
-	
+	/*
 	@Autowired
 	public void setEvalType(PerEval EvaluationType)
 	{
 		PerformanceEvaluation = EvaluationType;
 		System.out.println("<<Auto Wired SetEvalType");
 	}
-	
+	*/
 	
 	
 	
