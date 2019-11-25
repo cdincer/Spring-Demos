@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class BasketballCoach implements Coach
 {
 	@Autowired
-	@Qualifier("dailyPerEval")
+	@Qualifier("weeklyPerEval")
 	private PerEval PerformanceEvaluation;
 	
 	public BasketballCoach()

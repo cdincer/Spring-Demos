@@ -11,5 +11,5 @@ http://www.springframework.org/schema/context/spring-context.xsd"
  xmlns="http://www.springframework.org/schema/beans">
  
 <context:component-scan base-package="com.test.springdemo"/>
-  
+ <context:property-placeholder location="classpath:eval.properties"/> 
 </beans>
