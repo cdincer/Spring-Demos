@@ -16,7 +16,7 @@ public class MonthlyPerEval implements PerEval {
 	public String getRandomStatEvaluation() {
 		Random Rand = new Random();
 		String Stat="";
-		String[] Stats= {"D--Strength","D--Perception","D--Endurance","D--Coolness","D--Intelligence","D--Agility"};
+		String[] Stats= {"M--Strength","M--Perception","M--Endurance","M--Coolness","M--Intelligence","M--Agility"};
 		
 		Stat= Stats[Rand.nextInt(6)];
 		return "Athletes Monthly "+Stat+" was great";
