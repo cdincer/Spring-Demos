@@ -26,5 +26,22 @@ public class TrackCoach implements Coach {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	
+	//init method spot
+	
+	public void InitMethod()
+	{
+		System.out.println("Bean Init Method Done: Track Coach Variety");
+		
+	}
+	
+	//destroy method spot
+	
+	public void DestroyMethod()
+	{
+		System.out.println("Bean Destroy Method Done: Track Coach Variety");
+		
+	}
 
 }

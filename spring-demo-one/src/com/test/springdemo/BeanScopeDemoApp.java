@@ -6,7 +6,7 @@ public class BeanScopeDemoApp {
 
 	public static void main(String[] args) {
 		//load the spring configuration file
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanScope-applicationContext.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanScope-applicationContextV2.xml");
 		
 		
 		//retrieve bean from spring container
