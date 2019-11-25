@@ -1,12 +1,14 @@
 package com.test.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BasketballCoach implements Coach
 {
 	@Autowired
+	@Qualifier("monthlyPerEval")
 	private PerEval PerformanceEvaluation;
 	
 	public BasketballCoach()
@@ -14,24 +16,7 @@ public class BasketballCoach implements Coach
 		System.out.println("<<No Arg Default Constructor");
 	}
 	
-	/*
-	public BasketballCoach(PerEval EvaluationType)
-	{
-		PerformanceEvaluation = EvaluationType;
-	}
-	*/
-	
-	
-	//Setter method
-	/*
-	@Autowired
-	public void setEvalType(PerEval EvaluationType)
-	{
-		PerformanceEvaluation = EvaluationType;
-		System.out.println("<<Auto Wired SetEvalType");
-	}
-	*/
-	
+
 	
 	
 	@Override
