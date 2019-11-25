@@ -10,21 +10,6 @@ http://www.springframework.org/schema/context/spring-context.xsd"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
  xmlns="http://www.springframework.org/schema/beans">
  
- 
-
-
-<bean id="myPerformance" class="com.test.springdemo.DailyPerService"> </bean>
-
-<bean 
-id="myCoach" 
-class="com.test.springdemo.TrackCoach"
-init-method="InitMethod"
-destroy-method="DestroyMethod">
-	
-<constructor-arg ref="myPerformance" />
-</bean>
-
-
-
-
+<context:component-scan base-package="com.test.springdemo"/>
+  
 </beans>
