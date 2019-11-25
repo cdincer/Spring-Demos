@@ -13,7 +13,7 @@ Coach theCoach= context.getBean("basketballCoach",Coach.class);
 System.out.println(theCoach.getDailyWorkout());
 System.out.println(theCoach.getDailyPerformance());
 System.out.println(theCoach.getRandomAttributeReport());
-//
+
 context.close();
 
 	}
