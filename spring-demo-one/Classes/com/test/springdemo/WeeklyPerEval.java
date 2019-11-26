@@ -2,6 +2,8 @@ package com.test.springdemo;
 
 import java.util.Random;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -10,6 +12,18 @@ public class WeeklyPerEval implements PerEval {
 
 	@Value("${foo.Values}")
 	String[] ReceivedValues;
+	
+	@Value("${foo.PostValues}")
+	String[] PostScriptValues;
+	
+	public WeeklyPerEval()
+	{
+		System.out.println("Inside WeeklyPerEval construct");
+		
+	}
+	
+	
+	
 	@Override
 	public String getPerEvaluation() {
 		// TODO Auto-generated method stub
@@ -22,5 +36,15 @@ public class WeeklyPerEval implements PerEval {
 
 		String Stat= ReceivedValues[Rand.nextInt(ReceivedValues.length)];
 		return "Athletes Weekly "+Stat+" was great";	}
+	
+	@PostConstruct
+	public void getPostRandomStatEvaluation() {
+		Random Rand = new Random();
+
+		String Stat= PostScriptValues[Rand.nextInt(PostScriptValues.length)];
+		System.out.println("Athletes Weekly "+Stat+" was great");	
+		}
+	
+	
 
 }
