@@ -10,12 +10,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class WeeklyPerEval implements PerEval {
 
-	@Value("${foo.Values}")
-	String[] ReceivedValues;
-	
-	@Value("${foo.PostValues}")
-	String[] PostScriptValues;
-	
+	String[] ReceivedValues = {"w--Strength","w--Perception","w--Endurance","w--Coolness","w--Intelligence","w--Agility"};
+
 	public WeeklyPerEval()
 	{
 		System.out.println("Inside WeeklyPerEval construct");
@@ -37,14 +33,6 @@ public class WeeklyPerEval implements PerEval {
 		String Stat= ReceivedValues[Rand.nextInt(ReceivedValues.length)];
 		return "Athletes Weekly "+Stat+" was great";	}
 	
-	@PostConstruct
-	public void getPostRandomStatEvaluation() {
-		Random Rand = new Random();
 
-		String Stat= PostScriptValues[Rand.nextInt(PostScriptValues.length)];
-		System.out.println("Athletes Weekly "+Stat+" was great");	
-		}
-	
-	
 
 }

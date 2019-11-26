@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
+@Scope("singleton")
 public class BasketballCoach implements Coach
 {
 	@Autowired
@@ -41,13 +41,13 @@ public class BasketballCoach implements Coach
 	
 	@PostConstruct
 	public void DoneAfterAchieved() {
-		System.out.println("@PostConstruct triggered");
+		System.out.println("BasketBallCoach-@PostConstruct triggered");
 	}
 	//For "prototype" scoped beans, Spring does not call the @PreDestroy method.  
 
 	@PreDestroy
 	public void DestroyAfterAchieved() {
-		System.out.println("@PreDestroy triggered");
+		System.out.println("BasketBallCoach-@PreDestroy triggered");
 	}
 
 	
