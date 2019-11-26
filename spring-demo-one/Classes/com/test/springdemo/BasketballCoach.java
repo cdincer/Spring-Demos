@@ -2,13 +2,15 @@ package com.test.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype")
 public class BasketballCoach implements Coach
 {
 	@Autowired
-	@Qualifier("weeklyPerEval")
+	@Qualifier("dailyPerEval")
 	private PerEval PerformanceEvaluation;
 	
 	public BasketballCoach()
