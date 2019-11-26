@@ -18,11 +18,11 @@ public class HelloSpringApp {
 		System.out.println(theCoach.getDailyWorkout());
 		System.out.println(theCoach.getDailyPerformance());
 		System.out.println(theCoach.getRandomAttributeReport());
-		
-		System.out.println("Do Two Coaches point at the same object:"+result+"?");	
+		/*
+		System.out.println("Do Two Coaches point at the same object:"+result+" ?");	
 		System.out.println("Coach Location:"+theCoach);
 		System.out.println("Coach Location:"+TestCoach);
-
+*/
 		
 		context.close();
 
