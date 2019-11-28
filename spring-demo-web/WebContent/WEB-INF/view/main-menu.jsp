@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
-<h2>Hello World</h2>
-<h1>?</h1>
+<h1>Student Records System</h1>
+<h2>Records Menu</h2>
+<h2><a href="showForm">Student Record Searching</a></h2>
 </html>
