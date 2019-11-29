@@ -8,15 +8,10 @@ public class Student {
 	private String lastName;
 	private String country;
 	private String favouriteLanguage;
-	
+	private String[] operatingSystems;
 
-	public String getFavouriteLanguage() {
-		return favouriteLanguage;
-	}
 
-	public void setFavouriteLanguage(String favouriteLanguage) {
-		this.favouriteLanguage = favouriteLanguage;
-	}
+
 
 	private LinkedHashMap<String,String> CountryOptions;
 	
@@ -57,11 +52,30 @@ public class Student {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	// Setters/Getters End
+	
+	public String getFavouriteLanguage() {
+		return favouriteLanguage;
+	}
 
+	public void setFavouriteLanguage(String favouriteLanguage) {
+		this.favouriteLanguage = favouriteLanguage;
+	}
+	
 	public LinkedHashMap<String, String> getCountryOptions() {
 		return CountryOptions;
 	}
+	
+	public String[] getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(String[] operatingSystems) {
+		this.operatingSystems = operatingSystems;
+	}
+
+	// Setters/Getters End
+
+
 
 	
 
