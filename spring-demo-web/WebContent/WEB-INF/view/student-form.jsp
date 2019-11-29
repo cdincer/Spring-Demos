@@ -15,6 +15,17 @@ First name:<form:input path="firstName" />
 <br><br>
 Last name:<form:input path="lastName"/>
 <br><br>
+Country:
+<form:select path="country">
+<form:options items="${student.countryOptions}" />
+</form:select>
+<br><br>
+Favourite Programming Language:
+Java<form:radiobutton path="favouriteLanguage" value="Java"/>
+C#<form:radiobutton path="favouriteLanguage" value="C#"/>
+PHP<form:radiobutton path="favouriteLanguage" value="PHP"/>
+Perl<form:radiobutton path="favouriteLanguage" value="Perl"/>
+
 <input type="submit" value="Submit"/>
 </form:form>
 </body>

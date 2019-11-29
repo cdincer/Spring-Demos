@@ -11,9 +11,12 @@
 <body>
 The student recording is confirmed: 
 <br><br>
-${student.firstName} 
+First Name:${student.firstName} 
 <br><br>
-${student.lastName}
+Last Name:${student.lastName}
 <br><br>
+Student's Country:${student.country}
+<br><br>
+Favourite Language:${student.favouriteLanguage} 
 </body>
 </html>
