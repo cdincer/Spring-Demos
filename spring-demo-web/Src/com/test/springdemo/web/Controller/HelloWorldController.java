@@ -1,4 +1,4 @@
-package com.test.springdemo.web;
+package com.test.springdemo.web.Controller;
 
 import java.time.LocalDate;
 
