@@ -14,17 +14,21 @@
 Fields with Asterisk's(*) are required.
 	<br><br>
 	<form:form action="processForm" modelAttribute="customer">
-	First name &nbsp;&nbsp;  :<form:input path="firstName"/>
+	First name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  :<form:input path="firstName"/>
 	<br><br>
-	Last name(*):<form:input path="lastName"/>
+	Last name(*) &nbsp; &nbsp;:<form:input path="lastName"/>
 	<form:errors path="lastName" cssClass="error"/>
     <br><br>
     Free passes(*) &nbsp;:<form:input path="freePasses"/>
     <form:errors path="freePasses" cssClass="error"/>
     <br><br>
-    Postal Code  &nbsp;:<form:input path="postalCode"/>
+    Postal Code  &nbsp; &nbsp; &nbsp;:<form:input path="postalCode"/>
     <form:errors path="postalCode" cssClass="error"/>
-	
+	<br><br>
+    Product Code&nbsp;&nbsp;&nbsp;:<form:input path="productCode"/>
+    <form:errors path="productCode" cssClass="error"/>
+    	    <br><br>
+    
 	<input type="submit" value="Submit"/>
 	</form:form>
 </body>

@@ -6,6 +6,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.test.springdemo.web.Validation.ProductCode;
+
 public class Customer {
 	
 
@@ -23,7 +25,10 @@ public class Customer {
 	@Pattern(regexp="^[a-zA-Z0-9]{5}",message="only 5 chars/digits")
 	private String postalCode;
 	
+	@ProductCode
+	private String productCode;
 	
+
 
 	//firstName,LastName set/get begin
 	public String getFirstName() {
@@ -41,7 +46,7 @@ public class Customer {
 	//firstName,LastName set/get end
 
 	
-	//FreePasses,PostalCode set/get begin
+	//FreePasses,PostalCode,CourseCode set/get begin
 	public Integer getFreePasses() {
 		return freePasses;
 	}
@@ -55,6 +60,15 @@ public class Customer {
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
+	public String getProductCode() {
+		return productCode;
+	}
+	public void setProductCode(String productCode) {
+		this.productCode = productCode;
+	}
+	
+
+
 	//FreePasses set/get end
 
 
