@@ -8,5 +8,7 @@
 </head>
 <body>
 Customer recording is confirmed: ${customer.firstName} ${customer.lastName}
+Free Passes:${customer.freePasses}
+Postal Code:${customer.postalCode}
 </body>
 </html>
