@@ -12,9 +12,9 @@ public class Customer {
 	
 
 	private String firstName;
-	
+	//Old 	@Size(min=1,max=5,message="is required")
 	@NotNull(message="is required")
-	@Size(min=1,max=5,message="is required")
+	@Size(min=1,message="is required")
 	private String lastName;
 	
 	@NotNull(message="is required")
