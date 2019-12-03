@@ -18,9 +18,9 @@ public class CreateCustomerDemo {
     try {
     	//use the session object so save Java object
     	System.out.println("Creating 3 new customer");
-    	Customer tempCustomer1= new Customer("Paul","Walker1","paul@walker.com");
-    	Customer tempCustomer2= new Customer("Paul","Crawler2","paul@crawler.com");
-    	Customer tempCustomer3= new Customer("Paul","Flier3","paul@flier.com");
+    	Customer tempCustomer1= new Customer("Paul","Walker","paul@walker.com");
+    	Customer tempCustomer2= new Customer("Paul","Crawler","paul@crawler.com");
+    	Customer tempCustomer3= new Customer("Paul","Flier","paul@flier.com");
     	Customer tempCustomer4= new Customer("Clancy","Brown","clancy@brown.com");
     	
     	session.beginTransaction();
