@@ -21,12 +21,15 @@ public class CreateCustomerDemo {
     	Customer tempCustomer1= new Customer("Paul","Walker1","paul@walker.com");
     	Customer tempCustomer2= new Customer("Paul","Crawler2","paul@crawler.com");
     	Customer tempCustomer3= new Customer("Paul","Flier3","paul@flier.com");
+    	Customer tempCustomer4= new Customer("Clancy","Brown","clancy@brown.com");
+    	
     	session.beginTransaction();
     	
     	System.out.println("Adding the customer");
     	session.save(tempCustomer1);
     	session.save(tempCustomer2);
     	session.save(tempCustomer3);
+        session.save(tempCustomer4);
     	
     	
     	session.getTransaction().commit();
