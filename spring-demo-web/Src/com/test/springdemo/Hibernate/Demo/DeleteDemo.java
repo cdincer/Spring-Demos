@@ -20,7 +20,6 @@ public class DeleteDemo {
     
     try {
     	//use the session object so save Java object
-    	System.out.println("Creating 3 new customers");
 
 
  
@@ -28,17 +27,19 @@ public class DeleteDemo {
     	
     	session.beginTransaction();
     	
-    	int[] theId= {5,6,7};
+    	//Main table 14,15,16,17
+    	int[] theId= {13,14,15,16};
     	
     	for(int var : theId )
     	{
-        	Customer tempCustomer=session.get(Customer.class, var);
+        	CustomerDetail tempCustomerDetail=session.get(CustomerDetail.class, var);
 
-         	if(tempCustomer != null)
-        	{
-        		System.out.println("Deleting instructor "+theId);
-        	session.delete(tempCustomer);
-        	}
+         if(tempCustomerDetail != null)
+           {
+         		tempCustomerDetail.getCustomer().setCustomerDetail(null);
+            System.out.println("Deleting customer "+theId);
+        	session.delete(tempCustomerDetail);
+           }
         	
     	}
     	
@@ -49,13 +50,13 @@ public class DeleteDemo {
     	session.getTransaction().commit();
     	
     	
-    	//Opening a new session
+    	/*Opening a new session
     	session=factory.openSession();
     	session.beginTransaction();
 
 
     	session.getTransaction().commit();
-        //Closing a new session
+       Closing a new session */
     	
     }
     finally {

@@ -25,7 +25,8 @@ public class CustomerDetail {
 	private String hobby;
 	
 	
-	@OneToOne(mappedBy="customerDetail",cascade=CascadeType.ALL)
+	@OneToOne(mappedBy="customerDetail",cascade= 
+	{CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
 	private Customer customer;
 	
 	
