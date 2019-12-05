@@ -1,10 +1,13 @@
 package com.test.springdemo.Hibernate.Entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -25,13 +28,22 @@ public class Customer {
 	@Column(name="email")
 	private String email;
 	
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="customer_detail_id")
+	private CustomerDetail customerDetail;
 	
-	public Customer(String firstName, String lastName, String email) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
+	
+	public CustomerDetail getCustomerDetail() {
+		return customerDetail;
 	}
+
+
+	public void setCustomerDetail(CustomerDetail customerDetail) {
+		this.customerDetail = customerDetail;
+	}
+
+
+
 
 	
 	public Customer()
@@ -82,8 +94,20 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", customerDetail=" + customerDetail + "]";
 	}
+
+
+	public Customer(String firstName, String lastName, String email) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
+
+
 	
 	
 
