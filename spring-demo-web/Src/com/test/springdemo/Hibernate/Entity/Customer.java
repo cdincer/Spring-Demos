@@ -1,5 +1,8 @@
 package com.test.springdemo.Hibernate.Entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -33,6 +37,34 @@ public class Customer {
 	private CustomerDetail customerDetail;
 	
 	
+	@OneToMany(mappedBy="Customer", cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+	private List<Category> category;
+	
+	
+	public List<Category> getCategory() {
+		return category;
+	}
+
+
+	public void setCategory(List<Category> category) {
+		this.category = category;
+	}
+	
+	public void add(Category tempCategory)
+	{
+		if(category == null)
+		{
+			category = new ArrayList<>();
+		}
+		
+		category.add(tempCategory);
+		
+		
+	}
+	
+	
+
+
 	public CustomerDetail getCustomerDetail() {
 		return customerDetail;
 	}
