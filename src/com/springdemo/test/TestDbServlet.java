@@ -16,7 +16,7 @@ import java.sql.*;
  * Servlet implementation class TestDbServlet
  */
 @WebServlet("/TestDbServlet")
-public class Tester extends HttpServlet {
+public class TestDbServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -26,7 +26,7 @@ public class Tester extends HttpServlet {
 
 		// setup connection variables
 		String user = "springuser";
-		String pass = "12345";
+		String pass = "springuser";
 		
 		String jdbcUrl = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&serverTimezone=UTC";
 		String driver = "com.mysql.cj.jdbc.Driver";
@@ -35,7 +35,7 @@ public class Tester extends HttpServlet {
 		try {
 			PrintWriter out = response.getWriter();
 			
-			out.println("Connecting to database: " + jdbcUrl);
+			out.println("Connecting to database:2 " + jdbcUrl);
 			
 			Class.forName(driver);
 			
