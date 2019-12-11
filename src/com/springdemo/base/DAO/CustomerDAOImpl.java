@@ -24,12 +24,21 @@ private SessionFactory sessionFactory;
 	Session currentSession= sessionFactory.getCurrentSession();
 	
 	
-	Query<Customer> theQuery=currentSession.createQuery("from Customer", Customer.class);
+	Query<Customer> theQuery=currentSession.createQuery("from Customer order by lastName asc", Customer.class);
 	
 	// execute query and get result list.
 	List<Customer> customers = theQuery.getResultList();
 		
 		return customers;
+	}
+	@Override
+	public void saveCustomer(Customer theCustomer) {
+		// TODO Auto-generated method stub
+		Session currentSession = sessionFactory.getCurrentSession();
+		currentSession.save(theCustomer);
+		
+		
+		
 	}
 
 }
