@@ -19,7 +19,6 @@ public class CustomerDAOImpl implements CustomerDAO {
 private SessionFactory sessionFactory;
 	//Transactional Annotation helps with not opening session and closing every time.
 	@Override
-	@Transactional
 	public List<Customer> getCustomers() {
 		
 	Session currentSession= sessionFactory.getCurrentSession();
