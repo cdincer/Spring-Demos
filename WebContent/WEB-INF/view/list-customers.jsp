@@ -3,6 +3,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>First View</title>
+<link type="text/css"rel="stylesheet" 
+href="${pageContext.request.contextPath}/resources/css/style.css"/>
 </head>
 <body>
 Items :
