@@ -17,22 +17,30 @@ import com.springdemo.base.DAO.CustomerDAO;
 public class CustomerServiceImpl implements CustomerService {
 
 	@Autowired
-	private CustomerDAO customerDOA;
+	private CustomerDAO customerDAO;
 	
 	
+	//GET ALL
 	@Override
 	@Transactional
 	public List<Customer> getCustomers() {
 		// TODO Auto-generated method stub
-		return customerDOA.getCustomers();
+		return customerDAO.getCustomers();
 	}
 
-
+	//CREATE
 	@Override
 	@Transactional
 	public void saveCustomer(Customer theCustomer) {
-		customerDOA.saveCustomer(theCustomer);
+		customerDAO.saveCustomer(theCustomer);
 
+	}
+
+	//GET ONE
+	@Override
+	@Transactional
+	public Customer getCustomer(int theId) {
+		return customerDAO.getCustomer(theId);
 	}
 
 }

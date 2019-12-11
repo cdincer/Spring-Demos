@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.springdemo.Hibernate.Entity.Customer;
 import com.springdemo.base.DAO.CustomerDAO;
@@ -21,6 +22,8 @@ public class CustomerController {
 	@Autowired
 	private CustomerService customerService;
 	
+	
+	///READ
 	@GetMapping("/list")
 		public String listCustomers(Model theModel)
 		{
@@ -46,12 +49,30 @@ public class CustomerController {
 		return "customer-form";
 	}
 	
+	
+	
+	//CREATE
 	@PostMapping("/saveCustomer")
 	public String saveCustomer(@ModelAttribute("customer")Customer theCustomer)
 	{
 		customerService.saveCustomer(theCustomer);
+		
+		//Go back to list page
 		return "redirect:/customer/list";
 	}
 	
+	
+	//UPDATE
+	@GetMapping("/showFormForUpdate")
+	public String showFormForUpdate(@RequestParam("customerId")int theId,Model theModel)
+	{
+	//Come here after action kicked off in list-customers
+	//Get your model from below
+		Customer theCustomer=  customerService.getCustomer(theId);
+	//Bind that to new pages model here	
+		theModel.addAttribute("customer",theCustomer);
+	//Go on your merry way.
+		return "customer-form";
+	}
 
 }
