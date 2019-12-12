@@ -41,7 +41,7 @@ private SessionFactory sessionFactory;
 	public void saveCustomer(Customer theCustomer) {
 		// TODO Auto-generated method stub
 		Session currentSession = sessionFactory.getCurrentSession();
-		currentSession.save(theCustomer);
+		currentSession.saveOrUpdate(theCustomer);
 		
 		
 		

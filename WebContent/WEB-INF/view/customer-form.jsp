@@ -22,7 +22,13 @@ href="${pageContext.request.contextPath}/resources/css/style.css"/>
 <div id="container">
 <h3>Save Customer</h3>
 
+
 <form:form action="saveCustomer" modelAttribute="customer" method="POST">
+
+<!-- Adds id field as a hidden field. This loads and moves around just like the input boxes below -->
+<!-- Helps with updates -->
+<form:hidden path="id"/>
+
 <table>
 <tbody>
 
