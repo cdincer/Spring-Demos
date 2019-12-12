@@ -57,4 +57,23 @@ private SessionFactory sessionFactory;
 		return theCustomer;
 	}
 
+
+	@Override
+	public void deleteCustomer(int theId) {
+	Session currentSession= sessionFactory.getCurrentSession();
+    //One way to delete with query shenanigans
+	//	Query theQuery = currentSession.createQuery("delete from Customer where id=:customerId");
+		
+	//	theQuery.setParameter("customerId", theId);
+		
+    //theQuery.executeUpdate();
+	
+	//Hibernate shenanigans
+	Customer theCustomer = currentSession.get(Customer.class, theId);
+	currentSession.delete(theCustomer);
+
+	
+	
+	}
+
 }
