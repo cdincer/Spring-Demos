@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 import javax.transaction.Transactional;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -45,7 +46,6 @@ public class CRMLoggingAspect {
 	{}
 	
 	@Before("forAppFlow()")
-	@Transactional
 	public void before(JoinPoint theJoinPoint)
 	{
 		String theMethod = theJoinPoint.getSignature().toShortString();
@@ -58,5 +58,24 @@ public class CRMLoggingAspect {
 		{
 			myLogger.info("====>> argument:" + tempArg);		}
 	    }
+	
+	
+	@AfterReturning(
+			pointcut="forAppFlow()",
+			returning="theResult"
+			)
+	public void afterReturning(JoinPoint theJoinPoint,Object theResult)
+	{
+		//display method we are returning from
+		String theMethod = theJoinPoint.getSignature().toShortString();
+		
+		myLogger.info("===> in @AfterReturning:from method: " + theMethod);
+		// display data returned
+		
+		
+		myLogger.info("===> result: " + theResult);
+	}
+	
+	
 
 }
