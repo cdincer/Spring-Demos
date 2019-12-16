@@ -39,7 +39,6 @@ private SessionFactory sessionFactory;
 	//CREATE
 	@Override
 	public void saveCustomer(Customer theCustomer) {
-		// TODO Auto-generated method stub
 		Session currentSession = sessionFactory.getCurrentSession();
 		currentSession.saveOrUpdate(theCustomer);
 		

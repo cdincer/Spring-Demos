@@ -20,7 +20,7 @@ public class DemoAppConfig {
 
 		viewResolver.setPrefix("/WEB-INF/view/");
 		
-		viewResolver.setPrefix(".jsp");
+		viewResolver.setSuffix(".jsp");
 
 		
 		
