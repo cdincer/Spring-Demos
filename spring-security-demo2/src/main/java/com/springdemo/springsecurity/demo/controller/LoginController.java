@@ -13,5 +13,15 @@ public class LoginController {
 		return "advanced-login";
 	}
 	
+
+	
+	//Access-Denied spot
+	
+	@GetMapping("/access-denied")
+	public String showAccessDenied()
+	{
+		
+		return "access-denied";
+	}
 	
 }
