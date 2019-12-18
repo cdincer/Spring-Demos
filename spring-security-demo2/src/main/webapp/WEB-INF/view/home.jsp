@@ -15,7 +15,15 @@
 Role(s):<security:authentication property="principal.authorities"/>
  </p>
 <hr>
+<p>
+<a href="${pageContext.request.contextPath}/leaders">Managers Page</a>
+(Only for Managers)
+</p>
 
+<p>
+<a href="${pageContext.request.contextPath}/admins">Admins Page</a>
+(Only for Managers)
+</p>
 
 
 <form:form action="${pageContext.request.contextPath}/logout" method="POST">

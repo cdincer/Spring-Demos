@@ -15,4 +15,21 @@ public class DemoController {
 	}
 	
 	
+	
+	@GetMapping("/leaders")
+	public String showLeaders()
+	{
+		
+		return "leaders";
+	}
+	
+	
+	@GetMapping("/admins")
+	public String showAdmins()
+	{
+		
+		return "admins";
+	}
+	
+	
 }
