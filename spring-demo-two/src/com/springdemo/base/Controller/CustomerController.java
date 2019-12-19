@@ -22,7 +22,7 @@ public class CustomerController {
 	@Autowired
 	private CustomerService customerService;
 	
-	
+	//Rest of CRUD is below.
 	///READ
 	@GetMapping("/list")
 		public String listCustomers(Model theModel)
