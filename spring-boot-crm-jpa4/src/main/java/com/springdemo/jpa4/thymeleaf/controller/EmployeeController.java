@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.springdemo.jpa4.thymeleaf.entity.Employee;
 import com.springdemo.jpa4.thymeleaf.service.EmployeeService;
@@ -54,6 +55,32 @@ public EmployeeController(EmployeeService InEmployeeService)
 		
 		return "redirect:/employees/list";
 	}
+	
+	@GetMapping("/showFormForUpdate")
+	public String showFormForUpdate(@RequestParam("employeeId") int theId,Model theModel) 
+	{
+
+	Employee theEmployee = MemployeesService.findById(theId);
+	
+	theModel.addAttribute("employee",theEmployee);
+	
+	return "employees/employee-form";
+	}
+	
+	@GetMapping("/delete")
+	public String delete(@RequestParam("employeeId") int theId) 
+	{
+
+	Employee theEmployee = MemployeesService.findById(theId);
+	
+	MemployeesService.deleteById(theId);
+	
+	return "redirect:/employees/list";
+	}
+	
+	
+	
+	
 	
 }
 
