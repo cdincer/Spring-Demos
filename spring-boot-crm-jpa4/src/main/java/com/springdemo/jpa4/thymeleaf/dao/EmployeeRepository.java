@@ -1,5 +1,7 @@
 package com.springdemo.jpa4.thymeleaf.dao;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.springdemo.jpa4.thymeleaf.entity.Employee;
@@ -10,4 +12,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 //we added api-res through application.properties file.	
 //@RepositoryRestResource helps us change the name of endpoints from employees to members
 	
+	//Literal dark magic it creates queries
+public List<Employee> findAllByOrderByLastNameAsc();
 }
