@@ -16,6 +16,15 @@ public class DemoController {
 		
 		return "helloworld";
 	}
+	
+	@GetMapping("/login")
+	public String Redirect() {
+		
+		
+		return "login";
+	}
+	
+	
 }
 
 
